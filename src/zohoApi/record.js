@@ -17,7 +17,7 @@ export async function getRecordsFromRelatedList({
     }
 
     if (!(relatedListResp.statusText === "nocontent")) {
-      return { data: relatedListResp?.data, erroe: null };
+      return { data: relatedListResp?.data, error: null };
     }
   } catch (getRecordsFromRelatedListError) {
     console.log({ getRecordsFromRelatedListError });
