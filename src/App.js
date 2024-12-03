@@ -3,6 +3,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { useZohoInit } from "./hook/useZohoInit";
 import { zohoApi } from "./zohoApi";
+import { width } from "@mui/system";
 
 const parentContainerStyle = {
   borderTop: "1px solid #BABABA",
@@ -11,7 +12,7 @@ const parentContainerStyle = {
 };
 
 function App() {
-  const { module, recordId } = useZohoInit();
+  const { module, recordId } = useZohoInit({ height: "70%", width: "70%" });
   const [initPageContent, setInitPageContent] = React.useState(
     <CircularProgress />
   );
@@ -27,7 +28,7 @@ function App() {
     if (module && recordId?.[0]) {
       fetchData();
     }
-  }, [module, recordId?.[0]]);
+  }, [module, recordId]);
   return (
     <Box sx={parentContainerStyle}>
       <span
