@@ -3,7 +3,6 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { useZohoInit } from "./hook/useZohoInit";
 import { zohoApi } from "./zohoApi";
-import { width } from "@mui/system";
 
 const parentContainerStyle = {
   borderTop: "1px solid #BABABA",
